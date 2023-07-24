@@ -18,3 +18,5 @@ const Footer = () => {
 }
 
 export default Footer
+
+// continue 46:00 mark
