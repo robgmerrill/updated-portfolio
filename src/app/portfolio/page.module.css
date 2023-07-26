@@ -41,6 +41,11 @@
   font-weight: bold;
 }
 
+.item:hover {
+  border-color: #53c28b;
+}
+
 .item:hover .title {
+  border-color: #53c28b;
   color: #53c28b;
 }
