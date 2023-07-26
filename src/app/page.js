@@ -8,7 +8,7 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.item}>
         <h1 className={styles.title}>
-          Welcome to my portfolio page. lorem ipsum  
+          Welcome to my portfolio page.
         </h1>
         <p className={styles.description}>
           kljsdlf ksdlk fjlskdj flksdj flksj dflksj dflksj dflksj dflkj l sldfj lksdj flksdjf ldks jfsd flksdj flkdsj f lksdjf lksdj flksdjf 
