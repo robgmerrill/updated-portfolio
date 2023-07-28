@@ -2,7 +2,7 @@ export const items = {
     applications: [
       {
         id: 1,
-        title: "Creative Portfolio",
+        title: "AI Prompts",
         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur vel tenetur necessitatibus unde natus perspiciatis, amet cupiditate ducimus possimus, eaque ex autem id nobis eum dolorem. Neque eveniet fugiat tenetur?",
         image:
           "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg",
