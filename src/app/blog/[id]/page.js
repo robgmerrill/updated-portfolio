@@ -3,17 +3,31 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+async function getData(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    cache: 'no-store'
+  })
+
+  if (!res.ok) {
+    return notFound();
+  }
+
+  return res.json();
+}
 
 
-const BlogPost = async ({ params }) => {
+const BlogPost =  async ({ params }) => {
+  const data = await getData(params.id);
+  console.log(data)
+  
   console.log(params)
   return (
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.info}>
-          <h1 className={styles.title}>title asdfasdfasdf</h1>
+          <h1 className={styles.title}>{data.title}</h1>
           <p className={styles.desc}>
-            description lskdj flkajds f;lkajsd f;lkajsd f;lkajsd f;lkajsdfl;akj dsfl;kajds fl;kaj sdf;lkajdsf l;kaj sdfl;kaj sdfl;kaj sdf;lkajsdf l;kasjdf ;lkajsdf l;kasjdf ;laksjdf ;
+            {data.body}
           </p>
           <div className={styles.author}>
             <Image
