@@ -3,7 +3,6 @@ import styles from './footer.module.css'
 import Image from 'next/image'
 
 const Footer = () => {
-  console.log('hello')
   return (
     <div className={styles.container}>
         <div>&copy;Rob Merrill. All rights reserved</div>
@@ -18,5 +17,3 @@ const Footer = () => {
 }
 
 export default Footer
-
-// continue 46:00 mark

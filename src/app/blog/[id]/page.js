@@ -4,9 +4,12 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 async function getData(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+
+  console.log("here", id)
+  const res = await fetch(`http://localhost:3001/api/posts/${id}`, {
     cache: 'no-store'
   })
+  console.log("res", res)
 
   if (!res.ok) {
     return notFound();
@@ -31,18 +34,18 @@ const BlogPost =  async ({ params }) => {
           </p>
           <div className={styles.author}>
             <Image
-              src='https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&w=800'
+              src={data.img}
               alt=""
               width={40}
               height={40}
               className={styles.avatar}
             />
-            <span className={styles.username}>username</span>
+            <span className={styles.username}>{data.username}</span>
           </div>
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src='https://images.pexels.com/photos/1334607/pexels-photo-1334607.jpeg?auto=compress&cs=tinysrgb&w=800'
+            src={data.img}
             alt=""
             fill={true}
             className={styles.image}
@@ -51,7 +54,7 @@ const BlogPost =  async ({ params }) => {
       </div>
       <div className={styles.content}>
         <p className={styles.text}>
-          aldksjf a;lsdjf ;laksdjf;lakjsd f;lakj sdf;lkajsd f;lkaj sdf;lkajsd l;fkja s;dlkfj a;lksdfj l;aksdj fl;aksdjf l;kasdjf ;lkasdjflkasdjf ;laksdj f;laksdjfl;aksdjf ;laksdj f;laksdjf ;laksdjf ;alksdjfl;aksdjf la;ksdjflaksdjf ;laksdjf ;laksjdf ;lakjsdf;laksdjf ;alksdjf;laksdfj 
+          {data.content}
         </p>
       </div>
     </div>
