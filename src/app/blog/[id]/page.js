@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 async function getData(id) {
 
   console.log("here", id)
-  const res = await fetch(`/api/posts/${id}`, {
+  const res = await fetch(`https://updated-portfolio-gy69u2flq-robgmerrill.vercel.app//api/posts/${id}`, {
     cache: 'no-store'
   })
   console.log("res", res)

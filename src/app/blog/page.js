@@ -5,7 +5,7 @@ import Image from "next/image";
 
 async function getData() {
   console.log("before res")
-  const res = await fetch('/api/posts', {
+  const res = await fetch('https://updated-portfolio-gy69u2flq-robgmerrill.vercel.app//api/posts', {
     cache: 'no-store'
   })
 
