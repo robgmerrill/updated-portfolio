@@ -13,7 +13,7 @@ export const GET = async (request, {params}) => {
         console.log("here2")
         return new NextResponse(JSON.stringify(post), { status: 200 });
       } catch (err) {
-        return new NextResponse("Database Error", { status: 500 });
+        console.error('There has been a problem with your fetch operation:', error);
       }
 
    

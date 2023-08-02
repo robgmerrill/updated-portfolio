@@ -12,7 +12,7 @@ export const GET = async (request) => {
         console.log("route 3")
         return new NextResponse(JSON.stringify(posts), { status: 200 });
       } catch (err) {
-        return new NextResponse("Database Error", { status: 500 });
+        console.error('There has been a problem with your fetch operation:', error);
       }
 
    
